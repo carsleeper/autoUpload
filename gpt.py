@@ -18,5 +18,3 @@ def writingArticles( word :str ) -> str:
     )
     result =  response.choices[0].message.content
     return result[7:-3]
-
-print('a')
