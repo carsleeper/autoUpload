@@ -7,4 +7,4 @@ def loadingTrends() -> list:
     data = pytrends.trending_searches(pn="south_korea")
     keywordList = [data[0].loc[i] for i in range(15)]
 
-    return keywordList
+    return keywordLis
