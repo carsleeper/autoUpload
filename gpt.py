@@ -1,7 +1,8 @@
 from openai import OpenAI
-
+import os
 def writingArticles( word :str ) -> str:
-    client = OpenAI(api_key="sk-proj-cs8JSaqR8JSGnxu1ocoPT3BlbkFJ0Sg5go1EEYJgq5P58SPL")
+    key = os.getenv("openaiApiKey")
+    client = OpenAI(api_key= key)
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         response_format={ "type" : "text"},
